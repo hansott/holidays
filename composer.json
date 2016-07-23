@@ -1,7 +1,7 @@
 {
     "name": "hansott/holidays",
     "type": "library",
-    "description": "Holidays in PHP",
+    "description": "Returns the holidays for a country",
     "keywords": [
         "hansott",
         "holidays"
