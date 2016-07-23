@@ -24,4 +24,3 @@ final class AssumptionOfMary extends HolidayAbstract
         return true;
     }
 }
-

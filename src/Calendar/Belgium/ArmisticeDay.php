@@ -24,4 +24,3 @@ final class ArmisticeDay extends HolidayAbstract
         return true;
     }
 }
-

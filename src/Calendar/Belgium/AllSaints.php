@@ -24,4 +24,3 @@ final class AllSaints extends HolidayAbstract
         return true;
     }
 }
-

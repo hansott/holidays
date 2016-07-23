@@ -24,4 +24,3 @@ final class ChristmasDay extends HolidayAbstract
         return true;
     }
 }
-
