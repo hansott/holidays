@@ -41,9 +41,14 @@ abstract class AbstractTranslator extends PHPUnit_Framework_TestCase
         $this->assertInternalType('string', $name);
     }
 
+    private function mock($className)
+    {
+        return $this->getMockBuilder($className)->getMock();
+    }
+
     public function test_it_throws_exception_when_no_translation_is_found()
     {
-        $holiday = $this->createMock(Holiday::class);
+        $holiday = $this->mock(Holiday::class);
         $this->expectException(NoTranslationFound::class);
         $this->translator->getName($holiday);
     }
