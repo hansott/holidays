@@ -2,9 +2,7 @@
 
 namespace HansOtt\Holiday;
 
-use PHPUnit_Framework_TestCase;
-
-final class FactoryTest extends PHPUnit_Framework_TestCase
+final class FactoryTest extends TestCase
 {
     /**
      * @var Factory

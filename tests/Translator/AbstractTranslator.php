@@ -3,11 +3,11 @@
 namespace HansOtt\Holiday\Translator;
 
 use HansOtt\Holiday\Holiday;
+use HansOtt\Holiday\TestCase;
 use HansOtt\Holiday\Translator;
-use PHPUnit_Framework_TestCase;
 use HansOtt\Holiday\NoTranslationFound;
 
-abstract class AbstractTranslator extends PHPUnit_Framework_TestCase
+abstract class AbstractTranslator extends TestCase
 {
     /**
      * @return Translator
