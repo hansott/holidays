@@ -35,31 +35,29 @@ $calendar = $factory->getCalendar('BEL');
 $translator = $factory->getTranslator('BEL', 'nl-be');
 
 $year = Year::current();
-// or
-$year = new Year(2016);
-
+// or $year = new Year(2016);
 $holidays = $calendar->getHolidays($year);
 foreach ($holidays as $holiday) {
     $name = $translator->getName($holiday); // string
-    $startsAt = $holiday->startsAt(); // DateTimeImmutable
+    $startsAt = $holiday->beginsAt(); // DateTimeImmutable
     $endsAt = $holiday->endsAt(); // DateTimeImmutable
-    $formattedTime = $startsAt->format('l j F Y');
+    $formattedTime = $startsAt->format('l j F Y'); // string
     echo sprintf('%s -> %s', $name, $formattedTime) . PHP_EOL;
 }
 ```
 
 Output:
 ```
-Nieuwjaar -> vrijdag 1 januari 2016
-Paasmaandag -> maandag 28 maart 2016
-Feest Van De Arbeid -> zondag 1 mei 2016
-Onze Lieve Heer Hemelvaart -> maandag 11 april 2016
-Pinkstermaandag -> woensdag 18 mei 2016
-Nationale Feestdag -> donderdag 21 juli 2016
-Onze Lieve Vrouw Hemelvaart -> maandag 15 augustus 2016
-Allerheiligen -> dinsdag 1 november 2016
-Wapenstilstand -> vrijdag 11 november 2016
-Kerstmis -> zondag 25 december 2016
+Nieuwjaar -> Friday 1 January 2016
+Paasmaandag -> Monday 28 March 2016
+Feest Van De Arbeid -> Sunday 1 May 2016
+Onze Lieve Heer Hemelvaart -> Monday 11 April 2016
+Pinkstermaandag -> Wednesday 18 May 2016
+Nationale Feestdag -> Thursday 21 July 2016
+Onze Lieve Vrouw Hemelvaart -> Monday 15 August 2016
+Allerheiligen -> Tuesday 1 November 2016
+Wapenstilstand -> Friday 11 November 2016
+Kerstmis -> Sunday 25 December 2016
 ```
 
 ## Change log
